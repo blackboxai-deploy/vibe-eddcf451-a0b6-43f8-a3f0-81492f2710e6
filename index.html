@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello Page</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%91%8B%3C/text%3E%3C/svg%3E" />
+    <style>
+      :root { color-scheme: light dark; }
+      html, body { height: 100%; margin: 0; }
+      body {
+        display: grid;
+        place-items: center;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: radial-gradient(1000px 600px at 10% 10%, #f0f4ff 0%, transparent 60%),
+                    radial-gradient(800px 500px at 90% 90%, #ffeef0 0%, transparent 60%);
+      }
+      .card {
+        padding: 2.5rem 3rem;
+        border-radius: 14px;
+        background: rgba(255,255,255,0.7);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        text-align: center;
+      }
+      h1 { font-size: 3rem; margin: 0 0 0.5rem; }
+      p { margin: 0; color: #555; }
+      @media (prefers-color-scheme: dark) {
+        body { background: radial-gradient(1000px 600px at 10% 10%, #10131a 0%, transparent 60%),
+                          radial-gradient(800px 500px at 90% 90%, #1a1012 0%, transparent 60%);
+        }
+        .card { background: rgba(20,20,25,0.6); color: #eaeaea; }
+        p { color: #bdbdbd; }
+      }
+      .actions { margin-top: 1rem; }
+      .btn {
+        appearance: none;
+        border: 0;
+        background: #0ea5e9;
+        color: white;
+        padding: 0.6rem 1rem;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .btn:focus { outline: 2px solid #94d9ff; outline-offset: 2px; }
+    </style>
+  </head>
+  <body>
+    <main class="card" role="main" aria-label="Hello content">
+      <h1>Hello 👋</h1>
+      <p>Welcome to your hello page.</p>
+      <div class="actions">
+        <button class="btn" id="greetBtn" aria-label="Show greeting">Say hello</button>
+      </div>
+    </main>
+    <script>
+      const btn = document.getElementById('greetBtn');
+      btn?.addEventListener('click', () => {
+        alert('Hello there!');
+      });
+    </script>
+  </body>
+</html>
